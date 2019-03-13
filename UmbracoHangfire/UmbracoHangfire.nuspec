@@ -10,11 +10,14 @@
     <description>Hangfire scheduled tasks for Umbraco 8</description>
     <copyright>Copyright Guru Digital Media</copyright>
     <tags>DotNET Umbraco Hangfire</tags>
+    <projectUrl>https://github.com/guru-digital/umbraco-hangfire</projectUrl>
     <iconUrl>https://www.gurudigital.nz/assets/CompanyLogo/7cafece1d6/Guru-Logo-G-1920.png</iconUrl>
     <license type="file">LICENCE.txt</license>
     <contentFiles>
       <files include="**/App_Plugins/Hangfire/*" buildAction="Content" copyToOutput="true" />
     </contentFiles>
   </metadata>
-
+  <files>
+    <file src="LICENCE.txt" target=""/>
+  </files>
 </package>

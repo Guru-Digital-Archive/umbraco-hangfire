@@ -90,7 +90,7 @@ namespace UmbracoHangfirePlugin
                     manager.RemoveIfExists(dto.Id);
                 }
 
-            string message = i < 1 ? "There were no orphaned jobs to clean" : "Cleaned " + i + " orphaned jobs.";
+            string message = i < 1 ? "No orphaned jobs to clean" : "Cleaned " + i + " orphaned jobs.";
 
             return new
             {
