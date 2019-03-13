@@ -19,39 +19,39 @@ This integrates https://github.com/HangfireIO/Hangfire with Umbraco v8 https://g
 ## Example Usage ##
 
 ```csharp
-    [RuntimeLevel(MinLevel = RuntimeLevel.Boot)]
-    public class DemoJob : IComposer
-    {
-        private const string DemoJobID = "DemoJob";
+[RuntimeLevel(MinLevel = RuntimeLevel.Boot)]
+public class DemoJob : IComposer
+{
+	private const string DemoJobID = "DemoJob";
 
-        [HangfireJob("Demo Job")]
-        public static void Execute()
-        {
-            // Add code to perform action here
-            new HangfireDbContext().SaveHistory("Demo Job", "Demo Job Completed Successfully", DateTime.Now);            
-        }
+	[HangfireJob("Demo Job")]
+	public static void Execute()
+	{
+		// Add code to perform action here
+		new HangfireDbContext().SaveHistory("Demo Job", "Demo Job Completed Successfully", DateTime.Now);            
+	}
 
-        /// <summary>
-        /// Create job in startup of website
-        /// </summary>
-        public static void CreateRecurringJob()
-        {
-            // Create recurring job
-            RecurringJobDto job = HangfireJobForm.JobFromId(DemoJobID);
-            if (job == null)
-            {
-                RecurringJob.AddOrUpdate(DemoJobID, () => DemoJob.Execute(), "0 0 * * *", TimeZoneInfo.Local);
-            }
-        }
+	/// <summary>
+	/// Create job in startup of website
+	/// </summary>
+	public static void CreateRecurringJob()
+	{
+		// Create recurring job
+		RecurringJobDto job = HangfireJobForm.JobFromId(DemoJobID);
+		if (job == null)
+		{
+			RecurringJob.AddOrUpdate(DemoJobID, () => DemoJob.Execute(), "0 0 * * *", TimeZoneInfo.Local);
+		}
+	}
 
-        public void Compose(Composition composition)
-        {
-            HangfireStartup.HangFireStarted += HangfireStartup_HangFireStarted;
-        }
+	public void Compose(Composition composition)
+	{
+		HangfireStartup.HangFireStarted += HangfireStartup_HangFireStarted;
+	}
 
-        private void HangfireStartup_HangFireStarted(object sender, HangfireStartedArgs e)
-        {
-            CreateRecurringJob();
-        }
-    }
+	private void HangfireStartup_HangFireStarted(object sender, HangfireStartedArgs e)
+	{
+		CreateRecurringJob();
+	}
+}
 ```
