@@ -5,9 +5,9 @@ This integrates https://github.com/HangfireIO/Hangfire with Umbraco v8 https://g
 ## Installation ##
 Refer to Umbraco documentation to set up Umbraco development environment https://our.umbraco.com/download
 >### NuGet ###
-...
+```
 PM> Install-Package UmbracoHangfire
-...
+```
 >### Manually ###
 * Add UmbracoHangfire project to your solution
 * Add project reference to UmbracoHangfire
