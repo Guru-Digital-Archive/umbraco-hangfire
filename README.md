@@ -18,7 +18,7 @@ This integrates https://github.com/HangfireIO/Hangfire with Umbraco v8 https://g
 
 ## Example Usage ##
 
-...cs
+```csharp
     [RuntimeLevel(MinLevel = RuntimeLevel.Boot)]
     public class DemoJob : IComposer
     {
@@ -54,4 +54,4 @@ This integrates https://github.com/HangfireIO/Hangfire with Umbraco v8 https://g
             CreateRecurringJob();
         }
     }
-...
+```
