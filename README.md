@@ -3,7 +3,7 @@
 This integrates https://github.com/HangfireIO/Hangfire with Umbraco v8 https://github.com/umbraco/Umbraco-CMS
 
 ## Installation ##
->###Manually
+>### Manually ###
 * Refer to Umbraco documentation to set up Umbraco development environment https://our.umbraco.com/download
 * Add UmbracoHangfire project to your solution
 * Add project reference to UmbracoHangfire
@@ -18,8 +18,7 @@ This integrates https://github.com/HangfireIO/Hangfire with Umbraco v8 https://g
 
 ## Example Usage ##
 
-...csharp
-
+...cs
     [RuntimeLevel(MinLevel = RuntimeLevel.Boot)]
     public class DemoJob : IComposer
     {
