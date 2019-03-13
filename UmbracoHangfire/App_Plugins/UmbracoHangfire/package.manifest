@@ -1,0 +1,12 @@
+﻿{
+  "javascript": [
+    "~/App_Plugins/UmbracoHangfire/BackOffice/hf-tree/jquery-3.3.1.js",
+    "~/App_Plugins/UmbracoHangfire/BackOffice/hf-tree/jquery-cron-min.js",
+    "~/App_Plugins/UmbracoHangfire/BackOffice/hf-tree/hangfire-clean.controller.js",
+    "~/App_Plugins/UmbracoHangfire/BackOffice/hf-tree/hangfire-joblist.controller.js",
+    "~/App_Plugins/UmbracoHangfire/BackOffice/hf-tree/hangfire-job.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/UmbracoHangfire/BackOffice/hf-tree/edit.css"
+  ]
+}

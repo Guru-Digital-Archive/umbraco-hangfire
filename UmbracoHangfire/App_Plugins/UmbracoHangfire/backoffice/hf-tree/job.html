@@ -1,0 +1,44 @@
+﻿
+<div ng-controller="hangfirejob.controller as vm" class="clearfix">
+
+    <umb-editor-header name="vm.headerName"
+                       name-locked="true"
+                       hide-icon="true"
+                       hide-description="true"
+                       hide-alias="true">
+    </umb-editor-header>
+
+    <div class="form-horizontal">
+        <div class="umb-editor-container umb-panel-body umb-scrollable row-fluid">
+            <div class="umb-box-content">
+                <div class="umb-control-group">
+                    <div class="umb-property">
+                        <label class="control-label">Run Every</label>
+                        <div class="controls controls-row" id="cron-selector"></div>
+                    </div>
+                    <div ng-show="errors.Cron" class="alert alert-error">{{errors.Cron}}</div>
+                </div>
+                <umb-control-group label="Name">
+                    <div>{{vm.job.Name}}</div>
+                </umb-control-group>
+                <umb-control-group label="Last State">
+                    <div>{{vm.job.State}}</div>
+                </umb-control-group>
+                <umb-control-group label="Last AUTO Executed">
+                    <div>{{vm.job.LastExecuted}}</div>
+                </umb-control-group>
+                <umb-control-group label="Next Execution">
+                    <div>{{vm.job.NextExecution}}</div>
+                </umb-control-group>
+                <div>
+                    NOTE: Save can take up to 30 secs
+                </div>
+                <div class="umb-tab-buttons" detect-fold>
+                    <button ng-click="vm.save()" ng-disabled="vm.submitDisabled" type="submit" data-hotkey="ctrl+s" class="btn btn-success">Save</button>
+                    <button type="button" ng-click="vm.execute()" class="btn btn-info">Execute now</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

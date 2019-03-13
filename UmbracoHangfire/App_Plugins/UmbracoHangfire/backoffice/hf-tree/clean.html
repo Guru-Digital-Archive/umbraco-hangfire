@@ -1,0 +1,22 @@
+﻿<div ng-controller="hangfireclean.controller as vm" class="clearfix">
+    <umb-editor-header name="vm.headerName"
+                       name-locked="true"
+                       hide-icon="true"
+                       hide-description="true"
+                       hide-alias="true">
+    </umb-editor-header>
+    <umb-editor-container>
+        <umb-box>
+            <umb-box-header title="Clean orphaned Hangfire jobs" />
+            <umb-box-content>
+                <p>Remove Hangfire jobs with no method attached.</p>
+                <umb-button button-style="success"
+                            type="button"
+                            action="vm.clean()"
+                            label="Clean">
+                </umb-button>
+            </umb-box-content>
+        </umb-box>
+    </umb-editor-container>
+</div>
+

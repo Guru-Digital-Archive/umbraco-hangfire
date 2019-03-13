@@ -1,0 +1,43 @@
+﻿<div ng-controller="hangfirejoblist.controller as vm" class="clearfix">
+
+    <umb-editor-header name="vm.headerName"
+                       name-locked="true"
+                       hide-icon="true"
+                       hide-description="true"
+                       hide-alias="true">
+    </umb-editor-header>
+
+    <umb-editor-container ng-show="vm.loaded">
+        <umb-box>
+            <umb-box-header title="Jobs" />
+            <umb-box-content>
+                <div ng-show="vm.jobs">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Name</th>
+                            <th>State</th>
+                            <th>Last AUTO Executed</th>
+                            <th>Next Execution</th>
+                        </tr>
+                        <tr ng-repeat="item in vm.jobdata">
+                            <td><a href="/umbraco#/settings/hf-tree/job/{{item.Id}}">{{item.Name}}</a></td>
+                            <td>{{item.State}}</td>
+                            <td>{{item.LastExecuted}}</td>
+                            <td>{{item.NextExecution}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div ng-show="vm.nojobs">
+                    <p>
+                        No Hangfire jobs have been added to this website
+                    </p>
+                </div>
+            </umb-box-content>
+
+        </umb-box>
+
+
+    </umb-editor-container>
+
+</div>
+

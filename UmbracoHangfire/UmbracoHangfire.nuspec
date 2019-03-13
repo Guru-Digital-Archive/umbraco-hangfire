@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>UmbracoHangfire</id>
+    <version>$version$</version>
+    <title>Umbraco Hangfire</title>
+    <authors>Guru Digital Media</authors>
+    <owners>Guru Digital Media</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Hangfire scheduled tasks for Umbraco 8</description>
+    <copyright>Copyright Guru Digital Media</copyright>
+    <tags>DotNET Umbraco Hangfire</tags>
+    <iconUrl>https://www.gurudigital.nz/assets/CompanyLogo/7cafece1d6/Guru-Logo-G-1920.png</iconUrl>
+    <license type="file">LICENCE.txt</license>
+    <contentFiles>
+      <files include="**/App_Plugins/Hangfire/*" buildAction="Content" copyToOutput="true" />
+    </contentFiles>
+  </metadata>
+
+</package>

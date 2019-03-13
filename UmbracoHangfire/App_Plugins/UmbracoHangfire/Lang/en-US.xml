@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<language alias="en" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+  <area alias="treeHeaders">
+    <key alias="hf-tree">Hangfire</key>
+  </area>
+  <area alias="gdm-admintree">
+    <key alias="gdm-clearjscache">Clear Cache</key>
+  </area>
+</language>
