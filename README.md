@@ -1,24 +1,25 @@
-# Hangfire scheduled tasks for Umbraco 8
+# Hangfire scheduled tasks for Umbraco 8 #
 
 This integrates https://github.com/HangfireIO/Hangfire with Umbraco v8 https://github.com/umbraco/Umbraco-CMS
 
-##Installation
+## Installation ##
 >###Manually
 * Refer to Umbraco documentation to set up Umbraco development environment https://our.umbraco.com/download
 * Add UmbracoHangfire project to your solution
 * Add project reference to UmbracoHangfire
 * Copy the contents of UmbracoHangfire\App_Plugins to the corresponding folder in your Umbraco project
 
-##Umbraco Integration
+## Umbraco Integration ##
 
 * A Hangfire Tree node is added under Settings
 ** Jobs are listed
 ** Change Cron settings for any job
 * The Hangfire Dashboard can be accessed by admin users at [yoururl]/umbraco/hangfire
 
-##Example Usage
+## Example Usage ##
 
 ...csharp
+
     [RuntimeLevel(MinLevel = RuntimeLevel.Boot)]
     public class DemoJob : IComposer
     {
