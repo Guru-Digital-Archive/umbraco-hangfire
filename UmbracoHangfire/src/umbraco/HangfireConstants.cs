@@ -10,8 +10,5 @@
         public const string JobsName = "Jobs";
         public const string CleanAlias = "hf-clean";
         public const string CleanName = "Clean Orphaned Jobs";
-        public const string DemoJobName = "DemoJob";
-
-        public const int Version = 19;
     }
 }

@@ -13,11 +13,13 @@
 //    [RuntimeLevel(MinLevel = RuntimeLevel.Boot)]
 //    public class DemoJob : IComposer
 //    {
+//        public const string DemoJobName = "DemoJob";
+
 //        [HangfireJob("Demo Job")]
 //        public static void Execute()
 //        {
 //            // Add code to perform action here
-//            new HangfireDbContext().SaveHistory("Demo Job", "Demo Job Completed Successfully", DateTime.Now);            
+//            new HangfireDbContext().SaveHistory(DemoJobName, "Demo Job Completed Successfully", DateTime.Now);
 //        }
 
 //        /// <summary>
@@ -27,10 +29,10 @@
 //        {
 //            // Create recurring job
 //            RecurringJobManager manager = new RecurringJobManager();
-//            RecurringJobDto job = HangfireJobForm.JobFromId(HangfireConstants.DemoJobName);
+//            RecurringJobDto job = HangfireJobForm.JobFromId(DemoJobName);
 //            if (job == null)
 //            {
-//                RecurringJob.AddOrUpdate(HangfireConstants.DemoJobName, () => DemoJob.Execute(), "0 0 * * *", TimeZoneInfo.Local);
+//                RecurringJob.AddOrUpdate(DemoJobName, () => DemoJob.Execute(), "0 0 * * *", TimeZoneInfo.Local);
 //            }
 //        }
 

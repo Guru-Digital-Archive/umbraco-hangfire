@@ -26,13 +26,13 @@ PM> Install-Package UmbracoHangfire
 [RuntimeLevel(MinLevel = RuntimeLevel.Boot)]
 public class DemoJob : IComposer
 {
-	private const string DemoJobID = "DemoJob";
+	public const string DemoJobName = "DemoJob";
 
 	[HangfireJob("Demo Job")]
 	public static void Execute()
 	{
 		// Add code to perform action here
-		new HangfireDbContext().SaveHistory("Demo Job", "Demo Job Completed Successfully", DateTime.Now);            
+		new HangfireDbContext().SaveHistory(DemoJobName, "Demo Job Completed Successfully", DateTime.Now);
 	}
 
 	/// <summary>
@@ -41,10 +41,11 @@ public class DemoJob : IComposer
 	public static void CreateRecurringJob()
 	{
 		// Create recurring job
-		RecurringJobDto job = HangfireJobForm.JobFromId(DemoJobID);
+		RecurringJobManager manager = new RecurringJobManager();
+		RecurringJobDto job = HangfireJobForm.JobFromId(DemoJobName);
 		if (job == null)
 		{
-			RecurringJob.AddOrUpdate(DemoJobID, () => DemoJob.Execute(), "0 0 * * *", TimeZoneInfo.Local);
+			RecurringJob.AddOrUpdate(DemoJobName, () => DemoJob.Execute(), "0 0 * * *", TimeZoneInfo.Local);
 		}
 	}
 
