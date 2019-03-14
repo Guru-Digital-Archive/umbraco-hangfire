@@ -16,8 +16,8 @@ PM> Install-Package UmbracoHangfire
 ## Umbraco Integration ##
 
 * A Hangfire Tree node is added under Settings
-** Jobs are listed
-** Change Cron settings for any job
+ * Jobs are listed
+ * Change Cron settings for any job
 * The Hangfire Dashboard can be accessed by admin users at [yoururl]/umbraco/hangfire
 
 ## Example Usage ##
