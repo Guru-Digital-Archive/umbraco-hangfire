@@ -272,7 +272,6 @@
     <Content Include="App_Plugins\UmbracoHangfire\backoffice\hf-tree\hangfire-joblist.controller.js" />
     <Content Include="App_Plugins\UmbracoHangfire\backoffice\hf-tree\job.html" />
     <Content Include="App_Plugins\UmbracoHangfire\backoffice\hf-tree\jobs.html" />
-    <Content Include="App_Plugins\UmbracoHangfire\backoffice\hf-tree\jquery-3.3.1.js" />
     <Content Include="App_Plugins\UmbracoHangfire\backoffice\hf-tree\jquery-cron-min.js" />
     <Content Include="App_Plugins\UmbracoHangfire\Lang\en-US.xml" />
     <Content Include="LICENCE.txt" />
