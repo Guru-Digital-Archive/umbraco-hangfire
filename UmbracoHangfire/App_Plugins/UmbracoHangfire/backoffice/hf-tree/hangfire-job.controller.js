@@ -17,6 +17,12 @@
                 //Ref: https://github.com/shawnchin/jquery-cron/
                 $('#cron-selector').cron({
                     initial: vm.job.Cron,
+                    customValues: {
+                        "Every 5 Minutes": "*/5 * * * *",
+                        "Every 10 Minutes": "*/10 * * * *",
+                        "Every 15 Minutes": "*/15 * * * *",
+                        "Every 30 Minutes": "*/30 * * * *"
+                    },
                     onChange: function () {
                         vm.job.Cron = $(this).cron("value");
                     }
