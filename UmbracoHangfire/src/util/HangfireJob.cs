@@ -10,8 +10,8 @@ namespace UmbracoHangfire
     /// </summary>
     public class HangfireJob : Attribute
     {
+        private const int VERSION = 8;
         public string Name { get; set; }
-
         public HangfireJob(string Name)
         {
             this.Name = Name;
