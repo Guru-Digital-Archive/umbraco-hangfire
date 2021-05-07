@@ -16,7 +16,4 @@
       <files include="**/App_Plugins/Hangfire/*" buildAction="Content" copyToOutput="true" />
     </contentFiles>
   </metadata>
-  <files>
-    <file src="LICENCE.txt" target=""/>
-  </files>
 </package>

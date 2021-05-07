@@ -290,7 +290,6 @@
     <Content Include="App_Plugins\UmbracoHangfire\backoffice\hf-tree\jobs.html" />
     <Content Include="App_Plugins\UmbracoHangfire\backoffice\hf-tree\jquery-cron-min.js" />
     <Content Include="App_Plugins\UmbracoHangfire\Lang\en-US.xml" />
-    <Content Include="LICENCE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets" Condition="Exists('..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets')" />
