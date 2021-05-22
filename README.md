@@ -1,4 +1,5 @@
-# Hangfire scheduled tasks for Umbraco 8 #
+# Hangfire scheduled tasks for Umbraco 8#
+[![CI](https://github.com/guru-digital/umbraco-hangfire/actions/workflows/NetFxCI.yml/badge.svg)](https://github.com/guru-digital/umbraco-hangfire/actions/workflows/NetFxCI.yml)
 
 
 This integrates https://github.com/HangfireIO/Hangfire with Umbraco v8 https://github.com/umbraco/Umbraco-CMS
