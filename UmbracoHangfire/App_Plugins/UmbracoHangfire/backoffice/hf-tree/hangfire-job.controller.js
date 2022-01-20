@@ -52,7 +52,8 @@
                 vm.errors = [];
                 if (typeof response.data.Success !== "undefined" && response.data.Success === true && typeof response.data.Message !== "undefined") {
                     notificationsService.success("Success", response.data.Message);
-                    vm.job = response.data;
+                    vm.job.LastExecuted = response.data.LastExecuted;
+                    vm.job.NextExecution = response.data.NextExecution;
 
                 } else if (typeof response.data.errors) {
                     vm.errors = response.data.errors;
