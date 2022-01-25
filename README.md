@@ -1,3 +1,8 @@
+
+[![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges)
+
+This repository will no longer be maintained. I have created a private repository for use by Guru Digital Media to integrate with Umbraco9.
+
 # Hangfire scheduled tasks for Umbraco 8#
 [![CI](https://github.com/guru-digital/umbraco-hangfire/actions/workflows/NetFxCI.yml/badge.svg)](https://github.com/guru-digital/umbraco-hangfire/actions/workflows/NetFxCI.yml)
 
